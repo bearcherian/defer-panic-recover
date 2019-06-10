@@ -15,6 +15,6 @@ This panic goes to the calling `start()` function, where we have deferred a call
 ## running the code
 
 ```sh
-go build
-./dpr
+$ go build
+$ ./defer-panic-recover
 ```
