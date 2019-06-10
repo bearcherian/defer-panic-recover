@@ -18,3 +18,30 @@ This panic goes to the calling `start()` function, where we have deferred a call
 $ go build
 $ ./defer-panic-recover
 ```
+## example output
+
+```sh
+$ ./defer-panic-recover 
+What is the location?
+abcd
+OK, 'abcd'
+Whatchu want?
+1234
+OK, '1234'
+Enter something fun
+XYZ
+OK, 'XYZ'
+Enter something fun
+alpha789 omega 3
+OK, 'alpha789 omega 3'
+Are you being served?
+!!!
+2019/06/10 18:28:23 AAGGGHH!!!
+2019/06/10 18:28:23 recovering %!s(main.fn=0x1097cf0) (AAGGGHH!!!)
+Whatchu want?
+123
+OK, '123'
+YO!
+q
+2019/06/10 18:28:32 Bye-Bye!
+```
