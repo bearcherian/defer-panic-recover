@@ -1,0 +1,3 @@
+# Example usage of recover() in go
+
+This is a small program that shows how `recover()` works in Go. The program prompts for some input, any input, and then repeats it back to the screen. If the user enters `q`, the program exits. But if the user enters the magic line `?!?!`, a panic happens, which goes to the top of the `start()` function, where we have a defer call to `recoverMe()` which checks for `recover()`, and calls `start()` again. 
