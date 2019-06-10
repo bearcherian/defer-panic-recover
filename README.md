@@ -12,7 +12,7 @@ This panic goes to the calling `start()` function, where we have deferred a call
 
 ## running the code
 
-```go
+```sh
 go build
 ./dpr
 ```
