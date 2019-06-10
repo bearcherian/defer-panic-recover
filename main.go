@@ -19,7 +19,7 @@ var prompts = []string{
 	"YO!",
 	"Que?",
 }
-const panicLine = "?!?!"
+const panicLine = "!!!"
 const quitLine = "q"
 
 type fn func()
@@ -57,7 +57,7 @@ func exit() {
 }
 
 func panic() {
-	log.Panicln("AAGGGHH!!!")
+	log.Panic("AAGGGHH!!!")
 }
 
 func panicOnError(err error, msg string) {
@@ -68,7 +68,7 @@ func panicOnError(err error, msg string) {
 
 func recoverMe(f fn) {
 	if r := recover(); r != nil {
-		log.Printf("recovering %s", f)
+		log.Printf("recovering %s (%s)", f, r)
 		start()
 	}
 }
